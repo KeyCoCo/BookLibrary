@@ -1,0 +1,17 @@
+com\keycoco\library\dao\common\CommonDao.class
+com\keycoco\library\dao\inter\book\SysBookDao.class
+com\keycoco\library\service\MenuService.class
+com\keycoco\library\controller\LoginController.class
+com\keycoco\library\service\SysBookServiceImpl.class
+com\keycoco\library\pojo\SysMenu.class
+com\keycoco\library\service\SysBookService.class
+com\keycoco\library\interceptor\LoginInterceptor.class
+com\keycoco\library\dao\inter\LoginDao.class
+com\keycoco\library\pojo\SysBook.class
+com\keycoco\library\dao\common\CommonDaoImpl.class
+com\keycoco\library\controller\BookAdministrationController.class
+com\keycoco\library\service\MenuServiceImpl.class
+com\keycoco\library\dao\inter\menu\MenuDao.class
+com\keycoco\library\service\LoginServiceImpl.class
+com\keycoco\library\pojo\SysUser.class
+com\keycoco\library\service\LoginService.class

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.keycoco.library.dao.inter.menu.MenuDao">
+    <resultMap id="MenuMap" type="com.keycoco.library.pojo.SysMenu">
+        <result column="menu_id" property="menuId"/>
+        <result column="menu_title" property="menuTitle"/>
+        <result column="menu_level" property="menuLevel"/>
+        <result column="menu_url" property="menuUrl"/>
+    </resultMap>
+    <select id="queryMenus" resultMap="MenuMap" parameterType="Integer">
+        select * from sys_menu where menu_level=#{level}
+    </select>
+</mapper>

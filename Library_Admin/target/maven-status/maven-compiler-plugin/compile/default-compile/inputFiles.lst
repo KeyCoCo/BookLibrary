@@ -1,0 +1,17 @@
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\dao\common\CommonDao.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\dao\inter\LoginDao.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\dao\inter\menu\MenuDao.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\pojo\SysMenu.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\service\MenuService.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\service\LoginService.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\interceptor\LoginInterceptor.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\dao\inter\book\SysBookDao.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\pojo\SysBook.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\service\LoginServiceImpl.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\pojo\SysUser.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\dao\common\CommonDaoImpl.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\service\MenuServiceImpl.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\controller\LoginController.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\controller\BookAdministrationController.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\service\SysBookServiceImpl.java
+F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\service\SysBookService.java

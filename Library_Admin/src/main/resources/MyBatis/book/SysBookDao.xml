@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.keycoco.library.dao.inter.book.SysBookDao">
+  <resultMap id="BaseResultMap" type="com.keycoco.library.pojo.SysBook">
+    <id column="book_id" jdbcType="INTEGER" property="bookId" />
+    <result column="book_type_id" jdbcType="INTEGER" property="bookTypeId" />
+    <result column="book_type_name" property="bookTypeName"/>
+    <result column="book_title" jdbcType="VARCHAR" property="bookTitle" />
+    <result column="book_author" jdbcType="VARCHAR" property="bookAuthor" />
+    <result column="book_date" jdbcType="VARCHAR" property="bookDate" />
+    <result column="book_txt" jdbcType="VARCHAR" property="bookTxt" />
+    <result column="book_img" jdbcType="VARCHAR" property="bookImg" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    book_id, book_type_name, book_title, book_author, book_date, book_txt, book_img
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sys_book
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </select>
+  <select id="queryAllBook" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/> from sys_book,sys_book_type WHERE sys_book.`book_type_id`=sys_book_type.`book_type_id`
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from sys_book
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="book_id" keyProperty="bookId" parameterType="com.keycoco.library.pojo.SysBook" useGeneratedKeys="true">
+    insert into sys_book (book_type_id, book_title, book_author, 
+      book_date, book_txt, book_img
+      )
+    values (#{bookTypeId,jdbcType=INTEGER}, #{bookTitle,jdbcType=VARCHAR}, #{bookAuthor,jdbcType=VARCHAR}, 
+      #{bookDate,jdbcType=VARCHAR}, #{bookTxt,jdbcType=VARCHAR}, #{bookImg,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="book_id" keyProperty="bookId" parameterType="com.keycoco.library.pojo.SysBook" useGeneratedKeys="true">
+    insert into sys_book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="bookTypeId != null">
+        book_type_id,
+      </if>
+      <if test="bookTitle != null">
+        book_title,
+      </if>
+      <if test="bookAuthor != null">
+        book_author,
+      </if>
+      <if test="bookDate != null">
+        book_date,
+      </if>
+      <if test="bookTxt != null">
+        book_txt,
+      </if>
+      <if test="bookImg != null">
+        book_img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="bookTypeId != null">
+        #{bookTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="bookTitle != null">
+        #{bookTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="bookAuthor != null">
+        #{bookAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="bookDate != null">
+        #{bookDate,jdbcType=VARCHAR},
+      </if>
+      <if test="bookTxt != null">
+        #{bookTxt,jdbcType=VARCHAR},
+      </if>
+      <if test="bookImg != null">
+        #{bookImg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.keycoco.library.pojo.SysBook">
+    update sys_book
+    <set>
+      <if test="bookTypeId != null">
+        book_type_id = #{bookTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="bookTitle != null">
+        book_title = #{bookTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="bookAuthor != null">
+        book_author = #{bookAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="bookDate != null">
+        book_date = #{bookDate,jdbcType=VARCHAR},
+      </if>
+      <if test="bookTxt != null">
+        book_txt = #{bookTxt,jdbcType=VARCHAR},
+      </if>
+      <if test="bookImg != null">
+        book_img = #{bookImg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.keycoco.library.pojo.SysBook">
+    update sys_book
+    set book_type_id = #{bookTypeId,jdbcType=INTEGER},
+      book_title = #{bookTitle,jdbcType=VARCHAR},
+      book_author = #{bookAuthor,jdbcType=VARCHAR},
+      book_date = #{bookDate,jdbcType=VARCHAR},
+      book_txt = #{bookTxt,jdbcType=VARCHAR},
+      book_img = #{bookImg,jdbcType=VARCHAR}
+    where book_id = #{bookId,jdbcType=INTEGER}
+  </update>
+</mapper>
