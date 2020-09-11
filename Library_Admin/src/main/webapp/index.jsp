@@ -44,7 +44,6 @@
         <hr class="hr20" >
     </form>
 </div>
-
 <script>
     $(function  () {
         layui.use('form', function(){

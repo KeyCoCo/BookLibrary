@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17e8ae5c-607b-46be-9f19-9ec799c4e4ac" name="Default Changelist" comment="" />
+    <list default="true" id="17e8ae5c-607b-46be-9f19-9ec799c4e4ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Common_util/src/main/java/com/keycoco/util/Reflect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library_Admin/src/main/webapp/WEB-INF/pages/bookAdministration/addbook.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common_util/target/Common_util-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Common_util/target/Common_util-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common_util/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/Common_util/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/src/main/java/com/keycoco/library/controller/BookAdministrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/src/main/java/com/keycoco/library/controller/BookAdministrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/src/main/resources/MyBatis/book/SysBookDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/src/main/resources/MyBatis/book/SysBookDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/src/main/webapp/WEB-INF/pages/bookAdministration/bookList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/src/main/webapp/WEB-INF/pages/bookAdministration/bookList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/target/classes/MyBatis/book/SysBookDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/target/classes/MyBatis/book/SysBookDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/target/classes/com/keycoco/library/controller/BookAdministrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/target/classes/com/keycoco/library/controller/BookAdministrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/target/tomcat/work/Tomcat/localhost/Library/org/apache/jsp/WEB_002dINF/pages/bookAdministration/bookList_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/target/tomcat/work/Tomcat/localhost/Library/org/apache/jsp/WEB_002dINF/pages/bookAdministration/bookList_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/target/tomcat/work/Tomcat/localhost/Library/org/apache/jsp/WEB_002dINF/pages/bookAdministration/bookList_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/target/tomcat/work/Tomcat/localhost/Library/org/apache/jsp/WEB_002dINF/pages/bookAdministration/bookList_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/target/tomcat/work/Tomcat/localhost/Library/org/apache/jsp/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/target/tomcat/work/Tomcat/localhost/Library/org/apache/jsp/index_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Admin/target/tomcat/work/Tomcat/localhost/Library/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Admin/target/tomcat/work/Tomcat/localhost/Library/org/apache/jsp/index_jsp.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +58,13 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -62,26 +80,26 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="F:/tvmall_parent" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringSession" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\resources\MyBatis\book" />
-      <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\webapp" />
-      <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\dao" />
-      <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\webapp\images" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.keycoco.library.pojo" />
-      <recent name="com.keycoco.library.dao.inter.bookmanagement" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\webapp\WEB-INF\pages\common" />
       <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\webapp\WEB-INF\pages" />
       <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\webapp" />
       <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\webapp\WEB-INF" />
       <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\webapp\WEB-INF\pages\library" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.keycoco.library.pojo" />
+      <recent name="com.keycoco.library.dao.inter.bookmanagement" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\resources\MyBatis\book" />
+      <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\webapp" />
+      <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\java\com\keycoco\library\dao" />
+      <recent name="F:\java_code\BookKeycoco\Library_Admin\src\main\webapp\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,10 +225,26 @@
       <workItem from="1599267415398" duration="3568000" />
       <workItem from="1599271056019" duration="9290000" />
       <workItem from="1599465941975" duration="9553000" />
+      <workItem from="1599550578004" duration="11680000" />
+      <workItem from="1599638617750" duration="13320000" />
+      <workItem from="1599699496794" duration="10276000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

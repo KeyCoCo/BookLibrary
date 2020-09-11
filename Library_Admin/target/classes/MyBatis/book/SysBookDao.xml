@@ -82,7 +82,7 @@
     update sys_book
     <set>
       <if test="bookTypeId != null">
-        book_type_id = #{bookTypeId,jdbcType=INTEGER},
+        book_type_id  = #{bookTypeId,jdbcType=INTEGER},
       </if>
       <if test="bookTitle != null">
         book_title = #{bookTitle,jdbcType=VARCHAR},

@@ -62,13 +62,13 @@
                 </div>
                 <div class="layui-card-body ">
                     <table class="layui-table" lay-data="{
+                    id:'_table',
                     url:'book/queryBookList',
                     method:'get',
                     page:true,
                     toolbar: '#toolbarDemo',
                     limits:[10,20,30,40,50],
-                    limits:10,
-                    id:'test'}" lay-filter="test">
+                    limits:10}" lay-filter="test">
                         <thead>
                         <tr>
                             <th lay-data="{type:'checkbox'}">ID</th>
@@ -76,8 +76,8 @@
                             <th lay-data="{field:'bookTypeName', width:120, sort: true}">类型</th>
                             <th lay-data="{field:'bookTitle', edit: 'text', width: 100}">标题</th>
                             <th lay-data="{field:'bookAuthor', width:100,edit: 'text'}">作者</th>
-                            <th lay-data="{field:'bookDate', width: 100}">发布时间</th>
-                            <th lay-data="{field:'bookTxt', width:910, sort: true, edit: 'text'}">内容</th>
+                            <th lay-data="{field:'bookDate', width: 100,edit:'text',sort:true}">发布时间</th>
+                            <th lay-data="{field:'bookTxt', width:910, edit: 'text'}">内容</th>
                             <th lay-data="{field:'bookImg',width: 140, align:'center',templet:'#imgtmp'}"> 封面</th>
                         </tr>
                         </thead>
@@ -90,17 +90,18 @@
 </body>
 <script type="text/html" id="toolbarDemo">
     <div class = "layui-btn-container" >
-        <button class = "layui-btn layui-btn-sm" lay-event = "getCheckData" > 获取选中行数据 </button>
-        <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button >
+        <button class = "layui-btn layui-btn-sm" lay-event = "getCheckData" > 删除选中行数据 </button>
+        <button class="layui-btn layui-btn-sm" lay-event="addBook" onclick="xadmin.open('添加书籍','book/toAddBook',500,700)">添加书籍</button >
         <button class = "layui-btn layui-btn-sm" lay-event = "isAll" > 验证是否全选</button>
     </div >
+
 </script>
 <script type="text/html" id="switchTpl">
     <!-- 这里的checked的状态只是演示 -->
 <%--    <input type = "checkbox" name = "sex" value = "{{d.id}}" lay-skin = "switch"lay-text = "女|男" lay-filter = "sexDemo" {{ d.id == 10003 ? 'checked': ''}} >--%>
 </script>
 <script type="text/html" id="imgtmp">
-    <img src="{{ d.bookImg}}"/>
+    <img src="{{ d.bookImg}}" style="height: 100%;width: 100%"/>
 </script>
 <script>layui.use('laydate',
     function() {
@@ -129,7 +130,22 @@
                     data = obj.data //得到所在行所有键值
                     ,
                     field = obj.field; //得到字段
-                layer.msg('[ID: ' + data.id + '] ' + field + ' 字段更改为：' + value);
+                layer.msg('[ID: ' + data.bookId + '] ' + field + ' 字段更改为：' + value);
+                $.ajax({
+                    url:"book/updateBook",
+                    type:"post",
+                    data:{"bookId":data.bookId,"field":field,"value":value},
+                    dataType:"json",
+                    success:function (data) {
+                        if(data.code!=0){
+                            layer.msg("修改成功")
+                        }else{
+                            layer.msg("修改失败")
+                        }
+                        table.reload("_table");
+                        console.log(data);
+
+                    }})
             });
 
         //头工具栏事件
@@ -139,11 +155,34 @@
                 switch (obj.event) {
                     case 'getCheckData':
                         var data = checkStatus.data;
-                        layer.alert(JSON.stringify(data));
+                        var arr=[];
+                        for(i in data){
+                            arr[i]=data[i].bookId;
+                        }
+                        $.ajax({
+                           url:"book/delBookList",
+                           type:"post",
+                           data:"arr="+arr,
+                           dataType:"json",
+                           success:function (data) {
+                               if(data.msg!=="NONULL"){
+                                   if(data.msg==="OK"){
+                                       layer.msg("删除成功");
+                                       table.reload("_table");
+                                   }else{
+                                       layer.msg("删除失败");
+                                       table.reload("_table");
+                                   }
+                               }else{
+                                   layer.msg("选择不能为空");
+                               }
+
+                           }
+                        });
                         break;
-                    case 'getCheckLength':
-                        var data = checkStatus.data;
-                        layer.msg('选中了：' + data.length + ' 个');
+                    case 'addBook':
+                        layer.msg("添加");
+
                         break;
                     case 'isAll':
                         layer.msg(checkStatus.isAll ? '全选': '未全选');
